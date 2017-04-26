@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: "Lato";
+}    
+.intro {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.intro_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+
+}
+
+.title_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title_wrapper > h1 {
+    color: #242424;
+    font-size: 72px;
+    margin-bottom: 25px;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.main_wrapper {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: #242424;
+}
+
+.header_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inner {
+    width: 100%;
+    background-color: pink;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+}
+
+.time, .date {
+    color: #f8f8f8;
+    padding:0 10px;
+}
+
+.logo > h1 {
+    font-size: 36px;
+    color: #f8f8f8;
+}
+
+.news {
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article_image {
+    max-width: 100%;
+}
+
+
+h1 {
+    font-family: "Bodoni 72";
+    margin: 0;
+}
+button {
+    background-color: #F8f8f8;
+    border: 2px solid #242424;
+    outline: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
