@@ -34,11 +34,33 @@ window.onload = function() {
     setInterval(generateTime_Date,1000);
 }
 
-start_button = document.getElementById("start_button");
-
-start_button.addEventListener("click", the_click);
+var start_button = document.getElementById("start_button");
+    start_button.addEventListener("click", the_click),
+    intro = document.getElementById("intro");
+    intro_height = intro.offsetHeight,
+    main = document.getElementById("main"),
+    bbc = document.getElementById("bbc"),
+    dailymail = document.getElementById("dailymail"),
+    independent = document.getElementById("independent");
 
 function the_click() {
+
+    bbc.innerHTML = "";
+    dailymail.innerHTML =  "";
+    independent.innerHTML =  "";
+
+    // click to scroll down
+    var scroll_source_object = {
+       y: 0
+    };
+    
+    TweenMax.to(scroll_source_object,1, {
+        y: intro_height,
+        onUpdate: function() {
+            window.scrollTo(0, scroll_source_object.y);
+        },
+        ease: Power3.easeOut
+    });
 
 //urls
 var bbc_url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=bbe9e774459d4ff5b9cf0861b1274d07",
@@ -125,10 +147,10 @@ function bbc_data(bbc_resp) {
             title = bbc_articles[i].title,
             desc = bbc_articles[i].description,
             url = bbc_articles[i].url,
-            img = bbc_articles[i].urlToImage,
-            published = bbc_articles[i].publishedAt.split("T"),
-            date = published[0],
-            time = published[1].replace("Z","");
+            img = bbc_articles[i].urlToImage;
+            published = bbc_articles[i].publishedAt;
+            // date = published[0],
+            // time = published[1].replace("Z","");
 
             console.log(author);
             console.log(title);
@@ -136,8 +158,8 @@ function bbc_data(bbc_resp) {
             console.log(url);
             console.log(img);
             console.log(published);
-            console.log(date);
-            console.log(time);
+            // console.log(date);
+            // console.log(time);
 
             var open_tag = "<a href='" + url + "'><div class='story'>",
                 img_tag = "<img class='article_image' src='" + img + "'>",
@@ -235,6 +257,9 @@ function independent_data(independent_resp) {
     }
 }
 }
+
+
+
 
 
 
