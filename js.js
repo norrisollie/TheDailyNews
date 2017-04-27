@@ -45,6 +45,8 @@ var start_button = document.getElementById("start_button");
 
 function the_click() {
 
+    main.classList.remove("hidden");
+
     bbc.innerHTML = "";
     dailymail.innerHTML =  "";
     independent.innerHTML =  "";
@@ -61,6 +63,7 @@ function the_click() {
         },
         ease: Power3.easeOut
     });
+
 
 //urls
 var bbc_url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=bbe9e774459d4ff5b9cf0861b1274d07",
@@ -161,10 +164,10 @@ function bbc_data(bbc_resp) {
             // console.log(date);
             // console.log(time);
 
-            var open_tag = "<a href='" + url + "'><div class='story'>",
+            var open_tag = "<div class='story'><a href='" + url + "'>",
                 img_tag = "<img class='article_image' src='" + img + "'>",
                 title_tag = "<p class='article_title'>" + title + "</p>",
-                close_tag = "</div></a>";
+                close_tag = "</a></div>";
 
                 html = open_tag + img_tag + title_tag + close_tag;
 
@@ -202,10 +205,10 @@ function dailymail_data(dailymail_resp) {
             console.log(date)
             console.log(time)
 
-            var open_tag = "<a href='" + url + "'><div class='story'>",
+            var open_tag = "<div class='story'><a href='" + url + "'>",
                 img_tag = "<img class='article_image' src='" + img + "'>",
                 title_tag = "<p class='article_title'>" + title + "</p>",
-                close_tag = "</div></a>";
+                close_tag = "</a></div>";
 
                 html = open_tag + img_tag + title_tag + close_tag;
 
@@ -244,10 +247,10 @@ function independent_data(independent_resp) {
             console.log(date)
             console.log(time)
 
-            var open_tag = "<a href='" + url + "'><div class='story'>",
+            var open_tag = "<div class='story'><a href='" + url + "'>",
                 img_tag = "<img class='article_image' src='" + img + "'>",
                 title_tag = "<p class='article_title'>" + title + "</p>",
-                close_tag = "</div></a>";
+                close_tag = "</a></div>";
 
                 html = open_tag + img_tag + title_tag + close_tag;
 

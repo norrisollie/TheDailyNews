@@ -88,6 +88,31 @@ body {
     max-width: 100%;
 }
 
+.story {
+    padding: 20px;
+    position: relative;
+
+}
+
+.news > a {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+    box-sizing: border-box;
+}
+
+
+
+.article_title {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    background-color: red;
+    box-sizing: border-box;
+}
 
 h1 {
     font-family: "Bodoni 72";
