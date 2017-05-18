@@ -86,15 +86,25 @@ body {
 /* news section */
 
 .news {
-    width: 100%;
+    width: 100vw;
+    flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+
+
+    /*width: 100%;
+    display: flex;
+    flex-direction: row;*/
 }
 
 /* column section */
 
 .column {
-    width: 33.33%;
+    min-width: 33.33%;
+    box-sizing: border-box;
     padding: 20px;
 }
 
@@ -133,4 +143,28 @@ body {
 
 .move_content {
     transform:translateY(-100vh);
+}
+
+/* direction buttons */
+
+.direction {
+position: fixed;
+top:75px;
+height: 100vw;
+background-color: red;
+z-index: 1000;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
